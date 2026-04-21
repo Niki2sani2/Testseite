@@ -39,12 +39,13 @@
             transform: scale(1.1);
         }
 
-        #result {
-            margin-top: 30px;
-            font-size: 30px;
-            opacity: 0;
-            transition: 0.5s;
-        }
+           #result {
+    margin-top: 30px;
+    font-size: 30px;
+    opacity: 0;
+    transition: 0.5s;
+    color: white;
+}
 
         .show {
             opacity: 1;
@@ -86,22 +87,26 @@
 
         function answer(choice) {
 
-            let text = "";
+          let text = "";
 
-            if (choice === "ja") {
-                text = "Supi, bis gleich 😏 ";
-            } else {
-                text = "Schade, dann schick Füßi Fotos😅 ";
-            }
+    if (choice === "ja") {
+        text = Supi, bis Gleich😏";
+    } else {
+        text = "Schade, dann schick Füßi Fotos😅";
+    
 
-            let result = document.getElementById("result");
-            result.innerText = text;
+    let result = document.getElementById("result");
 
-            result.classList.remove("show");
-            void result.offsetWidth;
-            result.classList.add("show");
-        }
+    result.innerText = text;
 
+    
+    result.style.opacity = "1";
+
+    // Animation reset sauber erzwingen
+    result.classList.remove("show");
+    void result.offsetWidth;
+    result.classList.add("show");
+}
     </script>
 
 </body>
