@@ -80,27 +80,32 @@
 
     <script>
 
-        function start() {
-            document.getElementById("invite").innerText = "Komm heute zu mir 😏";
-            document.getElementById("choiceButtons").style.display = "block";
-        }
+function start() {
+    document.getElementById("invite").innerText = "Komm heute zu mir 😏";
+    document.getElementById("choiceButtons").style.display = "block";
+}
 
-        function answer(choice) {
+function answer(choice) {
 
-          let text = "";
+    let text = "";
 
     if (choice === "ja") {
-        text = Supi, bis Gleich😏";
+        text = "Supi, bis gleich 😏";
     } else {
-        text = "Schade, dann schick Füßi Fotos😅";
-    
+        text = "Schade, dann schick Füßi Fotos 😅";
+    }
 
     let result = document.getElementById("result");
 
     result.innerText = text;
 
-    
     result.style.opacity = "1";
+
+    result.classList.remove("show");
+    void result.offsetWidth;
+    result.classList.add("show");
+}
+</script>
 
     // Animation reset sauber erzwingen
     result.classList.remove("show");
